@@ -3,8 +3,8 @@ LIB = libft
 FILES = ft_strlen \
 		ft_strlcat \
 		ft_strchr \
-		ft_strrchr
-
+		ft_strrchr \
+		ft_strncmp
 CC = cc
 
 CFLAGS = -Wall -Werror -Wextra
