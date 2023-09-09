@@ -6,9 +6,11 @@
 /*   By: roylee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 21:35:57 by roylee            #+#    #+#             */
-/*   Updated: 2023/09/06 21:43:01 by roylee           ###   ########.fr       */
+/*   Updated: 2023/09/09 14:17:34 by roylee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
