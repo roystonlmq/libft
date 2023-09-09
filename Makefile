@@ -7,9 +7,14 @@ FILES = ft_strlen \
 		ft_strncmp \
 		ft_memchr \
 		ft_memcmp \
+		ft_memset \
+		ft_memmove \
+		ft_memcpy \
 		ft_atoi	\
 		ft_strnstr \
- 
+		ft_calloc \
+		ft_bzero  
+
 CC = cc
 
 CFLAGS = -Wall -Werror -Wextra
