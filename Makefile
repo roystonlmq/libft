@@ -13,8 +13,8 @@ FILES = ft_strlen \
 		ft_atoi	\
 		ft_strnstr \
 		ft_calloc \
-		ft_bzero  
-
+		ft_bzero \
+		ft_strdup		
 CC = cc
 
 CFLAGS = -Wall -Werror -Wextra
