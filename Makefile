@@ -14,7 +14,9 @@ FILES = ft_strlen \
 		ft_strnstr \
 		ft_calloc \
 		ft_bzero \
-		ft_strdup		
+		ft_strdup \
+		ft_substr
+
 CC = cc
 
 CFLAGS = -Wall -Werror -Wextra
