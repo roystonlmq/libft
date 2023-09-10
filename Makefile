@@ -2,6 +2,7 @@ LIB = libft
 
 FILES = ft_strlen \
 		ft_strlcat \
+		ft_strlcpy \
 		ft_strchr \
 		ft_strrchr \
 		ft_strncmp \
@@ -15,7 +16,9 @@ FILES = ft_strlen \
 		ft_calloc \
 		ft_bzero \
 		ft_strdup \
-		ft_substr
+		ft_substr \
+		ft_strjoin \
+		ft_strtrim
 
 CC = cc
 
