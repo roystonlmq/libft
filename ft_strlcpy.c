@@ -6,22 +6,23 @@
 /*   By: roylee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 22:15:47 by roylee            #+#    #+#             */
-/*   Updated: 2023/09/06 22:22:52 by roylee           ###   ########.fr       */
+/*   Updated: 2023/09/10 18:15:00 by roylee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	strlcpy(char *dst, const char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	size_t	i;
+	size_t	slen;
 
-	i = 0;
-	while (i < size)
+	slen = ft_strlen(src);
+	if (size > slen + 1)
+		ft_memcpy(dst, src, slen + 1);
+	else if (size != 0)
 	{
-		dst[i] = src[i];
-		i++;
+		ft_memcpy(dst, src, size - 1);
+		dst[size - 1] = 0;
 	}
-	dst[i] = 0;
-	return (ft_strlen(src));
+	return (slen);
 }
