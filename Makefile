@@ -1,6 +1,12 @@
 LIB = libft
 
-FILES = ft_strlen \
+FILES = ft_isalpha \
+		ft_isdigit \
+		ft_isalnum \
+		ft_isprint \
+		ft_toupper \
+		ft_tolower \
+		ft_strlen \
 		ft_strlcat \
 		ft_strlcpy \
 		ft_strchr \
@@ -18,7 +24,8 @@ FILES = ft_strlen \
 		ft_strdup \
 		ft_substr \
 		ft_strjoin \
-		ft_strtrim
+		ft_strtrim \
+		ft_split
 
 CC = cc
 
