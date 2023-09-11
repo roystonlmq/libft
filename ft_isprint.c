@@ -6,11 +6,25 @@
 /*   By: roylee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 20:55:08 by roylee            #+#    #+#             */
-/*   Updated: 2023/09/06 20:58:46 by roylee           ###   ########.fr       */
+/*   Updated: 2023/09/11 19:46:11 by roylee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
-	return (!((c >= 0 && c <= ' ') || c >= 127)); 
+	return (c >= ' ' && c <= '~'); 
 }
+
+/*
+#include "libft.h"
+int	main(void)
+{
+	int	c1 = -1;
+	int	c2 = 0;
+	int c3 = ' ';
+
+	printf("%d\n", ft_isprint(c1));
+	printf("%d\n", ft_isprint(c2));
+	printf("%d\n", ft_isprint(c3));
+}
+*/
