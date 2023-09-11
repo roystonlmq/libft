@@ -6,9 +6,11 @@
 /*   By: roylee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 21:39:28 by roylee            #+#    #+#             */
-/*   Updated: 2023/09/11 21:40:37 by roylee           ###   ########.fr       */
+/*   Updated: 2023/09/11 21:41:17 by roylee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
