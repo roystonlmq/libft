@@ -6,10 +6,14 @@
 /*   By: roylee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 16:46:37 by roylee            #+#    #+#             */
-/*   Updated: 2023/09/10 16:58:29 by roylee           ###   ########.fr       */
+/*   Updated: 2023/09/11 21:23:22 by roylee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Need to make sure we stop if char *s is a null char, 
+even if len indicates otherwise
+*/
 #include "libft.h"
 
 char	*ft_substr(const char *s, unsigned int start, size_t len)
@@ -21,7 +25,7 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	if (!buffer)
 		return (NULL);
 	i = 0;
-	while (i < len)
+	while (i < len && start <= len && s[i])
 	{
 		buffer[i] = s[start + i];
 		i++;
@@ -31,15 +35,13 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 }
 
 /*
-#include <stdio.h>
 int	main(void)
 {
 	char	test[] = "hello this is my name.";
-	unsigned int	start = 5;
-	size_t len = 17;
+	unsigned int	start = 4;
+	size_t len = 100;
 	char	*res = ft_substr(test, start, len);
 	printf("%s\n", res);
-	printf("%d", res == test);
 	free(res);
 }
 */

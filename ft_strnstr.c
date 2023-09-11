@@ -6,7 +6,7 @@
 /*   By: roylee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 13:01:58 by roylee            #+#    #+#             */
-/*   Updated: 2023/09/09 13:53:41 by roylee           ###   ########.fr       */
+/*   Updated: 2023/09/11 21:11:14 by roylee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,21 @@
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	char	*save;
-	int		llen;
-	int		i;
-	int		j;
+	size_t	llen;
+	size_t	i;
+	size_t	j;
 
 	save = (char *)big;
-	llen = (int)ft_strlen(little);
+	llen = ft_strlen(little);
 	if (llen == 0)
 		return ((char *)big);
 	i = 0;
-	while (big[i] && i < (int)len)
+	while (big[i] && i < len)
 	{
 		j = 0;
 		while (little[j])
 		{
-			if (little[j] != big[i + j] || (i + j) > (int)len)
+			if (little[j] != big[i + j] || (i + j) >= len)
 				break ;
 			j++;
 		}
@@ -39,20 +39,14 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (0);
 }
-
 /*
-#include <unistd.h>
-#include <bsd/string.h>
-#include <stdio.h>
 int	main(void)
 {
-	const char	*testbig = "lorem ipsum dolor sit amet";
-	const char	*testlittle = "dolor";
-	char *ptr;
+	const char	haystack[30] = "aaabcabcd";
+//	const char	needle[10] = "aabc";
+	char *ptr = (char*)"";
 
-	ptr = ft_strnstr(testbig, testlittle, 15);
+	ptr = ft_strnstr(haystack, "a", 1);
 	printf("mine: %s\n", ptr);
-	//ptr = strnstr(testbig, testlittle, 4);
-	//printf("actual: %s\n", ptr);
 }
 */
