@@ -6,7 +6,7 @@
 /*   By: roylee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 13:55:34 by roylee            #+#    #+#             */
-/*   Updated: 2023/09/09 14:14:08 by roylee           ###   ########.fr       */
+/*   Updated: 2023/09/11 20:03:47 by roylee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*buffer;
 
-	if (nmemb == 0 || size == 0)
-		return ((void *) NULL);
+//	if (nmemb == 0 || size == 0)
+//		return (NULL);
 	buffer = (void *)malloc(nmemb * size);
 	if (!buffer)
 		return (NULL);
