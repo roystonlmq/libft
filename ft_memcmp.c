@@ -6,7 +6,7 @@
 /*   By: roylee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 12:10:42 by roylee            #+#    #+#             */
-/*   Updated: 2023/09/09 12:26:06 by roylee           ###   ########.fr       */
+/*   Updated: 2023/09/11 20:13:01 by roylee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,27 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
+	size_t			i;
 	unsigned char	*ptr1;
 	unsigned char	*ptr2;
 
-	if (n == 0)
-		return (0);
 	ptr1 = (unsigned char *)s1;
 	ptr2 = (unsigned char *)s2;
-	while (*ptr1 == *ptr2 && *ptr1 && *ptr2 && n > 1)
-	{
-		ptr1++;
-		ptr2++;
-		n--;
-	}
-	return (*ptr1 - *ptr2);
+
+	i = 0;
+	if (n == 0)
+		return (0);
+	while (ptr1[i] == ptr2[i] && n > 1 && i < n - 1)
+		i++;
+	return (ptr1[i] - ptr2[i]);
 }
 
 /*
-#include <stdio.h>
-#include <string.h>
 int	main(void)
 {
-	const char	*str1 = "This is a test";
-	const char	*str2 = "This is also a test";
-	size_t		len = 0;
+	const char	*str1 = "\xff\0\0\xaa\0\xde\xffMACOSX\xff";
+	const char	*str2 = "\xff\0\0\xaa\0\xde\x00MBS";
+	size_t		len = 9;
 
 	int	result = memcmp(str1, str2, len);
 	int	result2 = ft_memcmp(str1, str2, len);
