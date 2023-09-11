@@ -6,7 +6,7 @@
 /*   By: roylee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 23:50:23 by roylee            #+#    #+#             */
-/*   Updated: 2023/09/09 00:05:52 by roylee           ###   ########.fr       */
+/*   Updated: 2023/09/11 20:45:00 by roylee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)s + len);
 	while (len >= 0)
 	{
-		if (s[len] == c)
+		if (s[len] == (unsigned char)c)
 			return ((char *)s + len);
 		len--;
 	}
