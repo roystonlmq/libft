@@ -6,7 +6,7 @@
 /*   By: roylee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 21:33:51 by roylee            #+#    #+#             */
-/*   Updated: 2023/09/08 23:53:00 by roylee           ###   ########.fr       */
+/*   Updated: 2023/09/11 20:29:07 by roylee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,19 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s)
-	{
-		if (*s == c)
-			return ((char *)s);
+	while (*s && *s != c)
 		s++;
-	}
-	if (c == 0)
-		return ((char *)s);
-	return (0);
+	if (*s == c)
+		return ((char *) s);
+	return ((char *) NULL);
 }
 
 /*
 #include <stdio.h>
 int	main(void)
 {
-	const char	test[] = "hello";
-	int		c = 0;
+	const char	test[] = "tripoulette";
+	int		c = 't' + 256;
 
 	printf("%s", ft_strchr(test, c));
 }
