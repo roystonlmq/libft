@@ -6,7 +6,7 @@
 /*   By: roylee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 12:10:42 by roylee            #+#    #+#             */
-/*   Updated: 2023/09/11 20:13:01 by roylee           ###   ########.fr       */
+/*   Updated: 2023/09/11 20:29:38 by roylee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 
 	ptr1 = (unsigned char *)s1;
 	ptr2 = (unsigned char *)s2;
-
 	i = 0;
 	if (n == 0)
 		return (0);
