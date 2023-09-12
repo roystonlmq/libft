@@ -6,7 +6,7 @@
 /*   By: roylee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 21:32:57 by roylee            #+#    #+#             */
-/*   Updated: 2023/09/11 21:36:33 by roylee           ###   ########.fr       */
+/*   Updated: 2023/09/12 20:23:50 by roylee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*new_node;
 
-	new_node = ft_calloc(sizeof(new_node), 1);
+	new_node = ft_calloc(sizeof(t_list), 1);
 	if (!new_node)
-		return (NULL);
+		return (0);
 	new_node->content = content;
-	new_node->next = NULL;
+	new_node->next = 0;
 	return (new_node);
 }
