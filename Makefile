@@ -6,7 +6,7 @@
 #    By: roylee <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/11 21:30:26 by roylee            #+#    #+#              #
-#    Updated: 2023/09/11 21:30:30 by roylee           ###   ########.fr        #
+#    Updated: 2023/09/12 20:54:22 by roylee           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ SRCS = \
 	ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c 
 BONUS = \
 		ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
-		ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
+		ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c	
 
 OBJS	=	${SRCS:.c=.o}
 BONUS_OBJS	=	$(BONUS:.c=.o)
