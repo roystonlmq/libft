@@ -6,7 +6,7 @@
 #    By: roylee <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/11 21:30:26 by roylee            #+#    #+#              #
-#    Updated: 2023/09/12 21:14:09 by roylee           ###   ########.fr        #
+#    Updated: 2023/09/12 22:06:01 by roylee           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ BONUS = \
 OBJS	=	${SRCS:.c=.o}
 BONUS_OBJS	=	$(BONUS:.c=.o)
 
-CC = gcc
+CC = cc
 NAME = libft.a
 CFLAGS	=	-Wall -Wextra -Werror
 RM	=	rm -f
@@ -49,7 +49,7 @@ fclean: clean
 
 re: fclean all
 
-bonus: $(OBJS) $(BONUS_OBJS)
-	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+bonus: $(BONUS_OBJS)
+	ar rcs $(NAME) $(BONUS_OBJS)
 
 .PHONY: all clean fclean re bonus
