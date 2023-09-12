@@ -6,7 +6,7 @@
 #    By: roylee <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/11 21:30:26 by roylee            #+#    #+#              #
-#    Updated: 2023/09/12 20:54:22 by roylee           ###   ########.fr        #
+#    Updated: 2023/09/12 21:14:09 by roylee           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ SRCS = \
 	ft_strdup.c ft_atoi.c ft_calloc.c ft_itoa.c \
 	ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_strmapi.c ft_striteri.c \
 	ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c 
+
 BONUS = \
 		ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
 		ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c	
@@ -40,6 +41,7 @@ $(NAME):	$(OBJS)
 	$(CC) $(CFLAGS) -o $@ -c $< -I.
 
 clean:
+	$(RM) $(BONUS_OBJS)
 	$(RM) $(OBJS)
 
 fclean: clean
