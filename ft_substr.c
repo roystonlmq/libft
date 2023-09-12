@@ -6,7 +6,7 @@
 /*   By: roylee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 16:46:37 by roylee            #+#    #+#             */
-/*   Updated: 2023/09/12 20:03:40 by roylee           ###   ########.fr       */
+/*   Updated: 2023/09/12 21:29:06 by roylee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,20 +19,17 @@ even if len indicates otherwise
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
 	char			*buffer;
-	unsigned int	i;
 
-	if (start >= len)
+	if (!s)
+		return (NULL);
+	if (start > ft_strlen(s))
 		return (ft_calloc(1, 1));
+	if (len > ft_strlen(s + start))
+		len = ft_strlen(s + start);
 	buffer = (char *)malloc(len + 1);
 	if (!buffer)
 		return (NULL);
-	i = 0;
-	while (i < len && s[i])
-	{
-		buffer[i] = s[start + i];
-		i++;
-	}
-	buffer[i] = 0;
+	ft_strlcpy(buffer, s + start, len + 1);
 	return (buffer);
 }
 

@@ -6,19 +6,19 @@
 /*   By: roylee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 20:47:15 by roylee            #+#    #+#             */
-/*   Updated: 2023/09/12 20:53:39 by roylee           ###   ########.fr       */
+/*   Updated: 2023/09/12 21:40:04 by roylee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_list;
 	t_list	*node;
 
 	new_list = 0;
-	if (!lst || !f )
+	if (!lst || !f)
 		return (0);
 	while (lst)
 	{
