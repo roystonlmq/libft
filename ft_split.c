@@ -6,7 +6,7 @@
 /*   By: roylee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 18:22:50 by roylee            #+#    #+#             */
-/*   Updated: 2023/09/12 21:49:54 by roylee           ###   ########.fr       */
+/*   Updated: 2023/09/12 21:59:33 by roylee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,7 @@
 
 static int	check_sep(char s, char c)
 {
-	if (s == c)
-		return (1);
-	return (0);
+	return (s == c);
 }
 
 static int	count_words(char const *s, char c)
