@@ -6,20 +6,26 @@
 /*   By: roylee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 20:41:31 by roylee            #+#    #+#             */
-/*   Updated: 2023/09/10 20:49:53 by roylee           ###   ########.fr       */
+/*   Updated: 2023/09/16 18:42:58 by roylee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+int	ft_putstr_fd(char *s, int fd)
 {
-	if (!s)
-		return ;
-	while (*s)
-		ft_putchar_fd(*(s++), fd);
-}
+	int	len;
 
+	len = 0;
+	if (!s)
+		return (0);
+	while (*s)
+	{
+		ft_putchar_fd(*(s++), fd);
+		len++;
+	}
+	return (len);
+}
 /*
 int main(void)
 {

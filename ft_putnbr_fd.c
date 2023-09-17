@@ -6,31 +6,38 @@
 /*   By: roylee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 20:44:46 by roylee            #+#    #+#             */
-/*   Updated: 2023/09/10 20:54:43 by roylee           ###   ########.fr       */
+/*   Updated: 2023/09/17 13:08:49 by roylee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+int	ft_putnbr_fd(long long int n, int fd)
 {
-	int	nbr;
+	const char	*base;
+	int			nbr_len;
 
-	nbr = n;
-	if (nbr == -2147483648)
-		ft_putstr_fd("-2147483648", fd);
-	else if (nbr < 0)
+	nbr_len = 0;
+	base = "0123456789";
+	if (n == LLONG_MIN)
+	{
+		write(fd, "-9223372036854775807", 20);
+		return (20);
+	}
+	if (n < 0)
 	{
 		ft_putstr_fd("-", fd);
-		ft_putnbr_fd(-n, fd);
+		nbr_len += ft_putnbr_fd(-n, fd);
 	}
-	else if (nbr > 9)
+	else if (n > 9)
 	{
-		ft_putnbr_fd(nbr / 10, fd);
-		ft_putchar_fd(nbr % 10 + '0', fd);
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
 	}
 	else
-		ft_putchar_fd(nbr + '0', fd);
+		ft_putchar_fd(base[n], fd);
+	nbr_len += ft_nbrlen_base(n, ft_strlen(base));
+	return (nbr_len);
 }
 
 /*
